@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "sora-resto-lounge",
+    "site": "sora-resto-lounge-2rlae",
     "public": "dist",
     "ignore": [
       "firebase.json",
