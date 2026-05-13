@@ -26,8 +26,8 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-secondary-dark mb-1">Téléphone & WhatsApp</h3>
-                <p className="text-sm text-secondary">+237 600 00 00 00</p>
-                <p className="text-xs text-primary font-medium mt-1">Lundi - Samedi : 8h00 - 18h00</p>
+                <p className="text-sm text-secondary">+237 653 48 48 48</p>
+                <p className="text-xs text-primary font-medium mt-1">Tous les jours : 11h00 - 02h00</p>
               </div>
             </div>
 
@@ -38,7 +38,6 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-secondary-dark mb-1">Email</h3>
                 <p className="text-sm text-secondary">contact@sorarestolounge.cm</p>
-                <p className="text-sm text-secondary">support@sorarestolounge.cm</p>
               </div>
             </div>
 
@@ -49,8 +48,9 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-secondary-dark mb-1">Adresse</h3>
                 <p className="text-sm text-secondary leading-relaxed">
-                  Douala, Cameroun<br />
-                  Siège Social - Zone Industrielle
+                  Avenue Douala Manga Bell<br />
+                  Quartier Bali, Douala<br />
+                  Cameroun
                 </p>
               </div>
             </div>

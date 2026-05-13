@@ -118,28 +118,28 @@ const Home = () => {
 
   const slides = [
     {
-      title: <>L'art de la <br /> <span className="text-primary-light italic">Gastronomie</span></>,
-      subtitle: "Gastronomie, Saveurs Authentiques et Service d'Excellence. La référence premium pour les pros et particuliers au Cameroun.",
-      cta1: { label: "Catalogue", link: "/catalogue", icon: true },
-      cta2: { label: "Expertise", link: "/contact" },
-      icon: "☀️",
-      iconLabel: "Solutions Solaires"
+      title: <>L'Art de la <br /> <span className="text-primary-light italic">Gastronomie Asiatique</span></>,
+      subtitle: "Sushi, Sashimi et saveurs d'Asie au cœur de Douala. Une expérience culinaire raffinée alliant tradition et modernité.",
+      cta1: { label: "Voir la Carte", link: "/catalogue", icon: true },
+      cta2: { label: "Réserver", link: "/contact" },
+      icon: "🍣",
+      iconLabel: "Cuisine Premium"
     },
     {
-      title: <>Votre Partenaire <br /> <span className="text-primary-light italic">Stratégique</span></>,
-      subtitle: "sora.resto.lounge accompagne le développement industriel et domestique avec des solutions innovantes et durables.",
-      cta1: { label: "À Propos", link: "/a-propos", icon: false },
-      cta2: { label: "Nos Secteurs", link: "#secteurs", action: scrollToSectors },
-      icon: "🏢",
-      iconLabel: "Expertise Pro"
+      title: <>Votre Lounge <br /> <span className="text-primary-light italic">Incontournable</span></>,
+      subtitle: "Vibrez au rythme de nos soirées avec DJ Live, cocktails signatures et une ambiance chaleureuse dans le quartier Bali.",
+      cta1: { label: "L'Expérience", link: "/a-propos", icon: false },
+      cta2: { label: "Nos Spécialités", link: "#secteurs", action: scrollToSectors },
+      icon: "🍸",
+      iconLabel: "Ambiance Lounge"
     },
     {
-      title: <>Une Équipe <br /> <span className="text-primary-light italic">Dédiée</span></>,
-      subtitle: "Besoin d'un devis personnalisé ou d'une assistance technique ? Nos experts vous répondent sous 24h.",
-      cta1: { label: "Contact", link: "/contact", icon: true },
-      cta2: { label: "WhatsApp", link: "https://wa.me/237600000000" },
-      icon: "📞",
-      iconLabel: "Support 24/7"
+      title: <>Événements <br /> <span className="text-primary-light italic">Sur Mesure</span></>,
+      subtitle: "Organisez vos réceptions, banquets ou soirées privées avec notre service traiteur d'exception.",
+      cta1: { label: "Devis Gratuit", link: "/devis", icon: true },
+      cta2: { label: "WhatsApp", link: "https://wa.me/237653484848" },
+      icon: "🎊",
+      iconLabel: "Événements"
     }
   ];
 
@@ -161,6 +161,14 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center overflow-hidden text-white bg-secondary-dark">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/fond.jpg" 
+            alt="Sora Resto Lounge Atmosphere" 
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary-dark/60 via-transparent to-secondary-dark/80" />
+        </div>
         <ParticlesBackground />
         
         <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
@@ -261,18 +269,18 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard 
             icon={Truck} 
-            title="Service Express" 
-            description="Une expérience culinaire livrée chez vous ou à savourer sur place. avec calcul en temps réel."
+            title="Livraison Express" 
+            description="Savourez vos plats préférés chez vous. Livraison rapide et soignée dans tout Douala."
           />
           <FeatureCard 
             icon={ShieldCheck} 
-            title="Paiement Sécurisé" 
-            description="Transactions certifiées via MoMo, OM ou Carte Bancaire. Sécurité maximale."
+            title="Qualité Garantie" 
+            description="Produits frais, hygiène rigoureuse et savoir-faire culinaire pour une expérience sans compromis."
           />
           <FeatureCard 
             icon={Clock} 
-            title="Support Premium" 
-            description="Une équipe dédiée et un assistant IA disponible 24/7 pour vos besoins techniques."
+            title="Service 7j/7" 
+            description="Notre équipe vous accueille tous les jours pour vos déjeuners, dîners et soirées lounge."
           />
         </div>
       </AnimatedSection>
@@ -281,11 +289,11 @@ const Home = () => {
       <AnimatedSection className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
             <div className="space-y-4">
-                <h2 className="text-5xl font-heading font-bold text-secondary-dark tracking-tighter">Sélection Vedette</h2>
-                <p className="text-secondary text-lg font-light">Le meilleur de l'innovation technologique et du confort.</p>
+                <h2 className="text-5xl font-heading font-bold text-secondary-dark tracking-tighter">Nos Incontournables</h2>
+                <p className="text-secondary text-lg font-light">Une sélection de nos créations les plus appréciées.</p>
             </div>
             <Link to="/catalogue" className="group flex items-center text-primary font-bold text-lg hover:text-primary/80 transition-colors">
-                Voir toute la collection 
+                Voir toute la carte 
                 <div className="ml-3 p-2 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors">
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -316,10 +324,10 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 {CATEGORIES.map((cat, idx) => {
                     const themes = {
-                        'Plats Signatures': { icon: "🥘", color: "from-orange-400 to-red-500" },
-                        'Entrées': { icon: "🥗", color: "from-green-400 to-emerald-600" },
-                        'Boissons': { icon: "🍷", color: "from-blue-400 to-indigo-600" },
-                        'Desserts': { icon: "🍰", color: "from-pink-400 to-rose-500" }
+                        'Sushi & Japonais': { icon: "🍣", color: "from-orange-400 to-red-500" },
+                        'Cuisine Chinoise': { icon: "🥢", color: "from-green-400 to-emerald-600" },
+                        'Spécialités Camerounaises': { icon: "🥘", color: "from-blue-400 to-indigo-600" },
+                        'Cocktails & Lounge': { icon: "🍸", color: "from-pink-400 to-rose-500" }
                     };
                     const theme = themes[cat] || { icon: "🍽️", color: "from-slate-400 to-slate-600" };
                     return <CategoryCard key={idx} title={cat} {...theme} />;
@@ -334,8 +342,15 @@ const Home = () => {
           className="relative bg-secondary-dark rounded-[3rem] md:rounded-[4rem] p-10 md:p-32 overflow-hidden text-center shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]"
           whileHover={{ scale: 1.005 }}
         >
+             <div className="absolute inset-0 z-0">
+                <img 
+                    src="/fond.jpg" 
+                    alt="Background" 
+                    className="w-full h-full object-cover opacity-20"
+                />
+             </div>
              <motion.div 
-                className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-purple-500/20"
+                className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-purple-500/20 z-0"
                 animate={{ 
                     background: [
                         "radial-gradient(circle at 0% 0%, rgba(0,86,179,0.15) 0%, transparent 50%)",
@@ -348,7 +363,7 @@ const Home = () => {
              
              <div className="relative z-10 space-y-8 md:space-y-10">
                 <h2 className="text-3xl md:text-7xl font-heading font-bold text-white tracking-tighter leading-tight">
-                    Un projet <span className="text-primary italic">gastronomique</span> ?
+                    Un événement <span className="text-primary italic">inoubliable</span> ?
                 </h2>
                 <p className="text-slate-400 text-lg md:text-2xl max-w-2xl mx-auto font-light leading-relaxed">
                     De la réception privée au banquet d'entreprise, nos chefs conçoivent vos menus de demain.
@@ -359,7 +374,7 @@ const Home = () => {
                       transition={{ duration: 3, repeat: Infinity }}
                       className="rounded-full w-full sm:w-auto"
                     >
-                        <Link to="/devis">
+                        <Link to="/contact">
                             <Button size="lg" className="rounded-full h-16 md:h-20 px-8 md:px-16 text-lg md:text-2xl bg-primary hover:bg-primary/90 border-none shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
                                 Réserver une table
                             </Button>
